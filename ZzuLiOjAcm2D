@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class ZzuLiOjAcm2D {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt(), n = sc.nextInt();
+        int c = 96;
+        for (int i = 0; i < m; i++) {
+            char b = (char) (c + 1);
+            StringBuilder s = new StringBuilder(b);
+            for (int j = 0; j < n; j++) {
+                while (s.length() < n) {
+                    if (c == 122) {
+                        c = 96;
+                    }
+                    ++c;
+                    char a = (char) c;
+                    s.append(a);
+                }
+            }
+            System.out.println(">" + s + "<");
+        }
+    }
+
+//    public static String abc(int n) {
+//        if (n <= 0) {
+//            return "每行字母数不能为零或负数,请重试!";
+//        }
+//        String b = "a";
+//        int c = 0;
+//        c = Integer.parseInt((b));
+//        StringBuilder s = new StringBuilder(Integer.toString(c));
+//        while (s.length() < n) {
+//            if (c == 122) {
+//                c = 97;
+//            }
+//            c++;
+//            s.append(String.valueOf(c));
+//        }
+//        s = new StringBuilder(Integer.toString(c));
+//        return s.toString();
+//    }
+}
